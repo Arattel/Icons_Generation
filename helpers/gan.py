@@ -1,6 +1,7 @@
 import torch.nn as nn
 import torch.nn.functional as F
 import torch
+from torch.autograd import Variable
 
 
 class Generator(nn.Module):
@@ -44,3 +45,4 @@ class LambdaLayer(nn.Module):
         self.lambd = lambd
     def forward(self, x):
         return self.lambd(x)
+    
